@@ -1,0 +1,29 @@
+{% extends 'template_base.html' %}
+
+{% block title %}
+    Accesories List
+{% endblock %}
+
+{% block content %}
+        <h1>Soccer Accesories</h1>
+
+
+    {%for x in products%}
+    <div class="card" style="width: 18rem;">
+        <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/54d9320fe4a647a8a60dac9f01023e22_9366/Minibalon_Messi_Naranja_GK3497_01_standard.jpg" class="card-img-top">
+        <div class="card-body">
+        <h4 class="card-title">{{x.name}}</h4>
+        <h5 class="card-title">Ttalle {{x.size}}</h5>
+        <p class="card-text">Precio ${{x.price}}</p>
+        
+        <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+    </div>
+ 
+    {% endfor %}
+
+    
+    
+
+
+{% endblock %}

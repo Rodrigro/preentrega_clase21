@@ -1,0 +1,28 @@
+{% extends 'template_base.html' %}
+
+{% block title %}
+    Listado de Camisetas
+{% endblock %}
+
+{% block content %}
+        <h1>Soccer Shirts</h1>
+
+
+    {%for x in products%}
+    <div class="card" style="width: 18rem;">
+        <img src="https://www.soccergarage.com/images/D/22900_433.jpg" class="card-img-top">
+        <div class="card-body">
+        <h5 class="card-title">{{x.name}}</h5>
+        <p class="card-text">Su precio es ${{x.price}}</p>
+        
+        <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+    </div>
+ 
+    {% endfor %}
+
+    
+    
+
+
+{% endblock %}

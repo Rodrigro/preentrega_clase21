@@ -1,0 +1,27 @@
+{% extends 'template_base.html' %}
+
+{% block title %}
+Accesories List
+{% endblock %}
+
+{% block content %}
+
+    <h1>Accesories</h1>
+    
+    <form action="" method="POST">
+
+        {% csrf_token %}
+
+        <table>
+            {{form.as_table}}
+        </table>
+
+
+        <input type="submit" value="Crear producto">
+    </form>
+   
+
+
+
+{% endblock %}
+

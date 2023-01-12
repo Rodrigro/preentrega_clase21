@@ -1,0 +1,29 @@
+{% extends 'template_base.html' %}
+
+{% block title %}
+    Listado de Camisetas
+{% endblock %}
+
+{% block content %}
+        <h1>Soccer Shoes</h1>
+
+
+    {%for x in products%}
+    <div class="card" style="width: 18rem;">
+        <img src="https://i.ebayimg.com/thumbs/images/g/~0QAAOSw~oFXHhVm/s-l225.jpg" class="card-img-top">
+        <div class="card-body">
+        <h4 class="card-title">{{x.name}}</h4>
+        <h5 class="card-title">Disponile en talle {{x.size}}</h5>
+        <p class="card-text">Su precio es ${{x.price}}</p>
+        
+        <a href="#" class="btn btn-primary">Comprar</a>
+        </div>
+    </div>
+ 
+    {% endfor %}
+
+    
+    
+
+
+{% endblock %}
